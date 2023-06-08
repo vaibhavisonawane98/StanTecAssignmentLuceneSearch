@@ -9,12 +9,12 @@ namespace MarketingCodingAssignment.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly SearchEngine _searchEngine;
+        private SearchEngine _searchEngine;
 
-        public HomeController(ILogger<HomeController> logger, SearchEngine searchEngine)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _searchEngine = searchEngine;
+            _searchEngine = new SearchEngine();
         }
 
         public IActionResult Index()
@@ -33,31 +33,31 @@ namespace MarketingCodingAssignment.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-
+        [HttpGet]
         public void CreateIndexAndSchema()
         {
             _searchEngine.CreateIndexAndSchema();
         }
 
+        [HttpGet]
         public void PopulateIndex()
         {
             // Sample Data
             var films = new List<Film> {
-                new Film {Id = 123, Title = "Test Title 1", Overview = "Test Desc 1" },
-                new Film {Id = 456, Title = "Test Title 2", Overview = "Test Desc 2" },
-                new Film {Id = 789, Title = "Test Title 3", Overview = "Test Desc 3" }
+                new Film {Id = "Film123", Title = "Test Title 1", Overview = "Test Desc 1" },
+                new Film {Id = "Film456", Title = "Test Title 2", Overview = "Test Desc 2" },
+                new Film {Id = "Film789", Title = "Test Title 3", Overview = "Test Desc 3" }
             };
 
             _searchEngine.PopulateIndex(films);
             return;
         }
 
-        [HttpGet]
-        public JsonResult Search(String searchString) 
-        {
-
-            return Json(_searchEngine.Search(searchString), new JsonSerializerSettings());
-        }
+        //[HttpPost]
+        //public JsonResult Search(String searchString) 
+        //{
+        //    return Json(_searchEngine.Search(searchString), new JsonSerializerSettings());
+        //}
 
 
 

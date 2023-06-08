@@ -29,3 +29,7 @@ C:\Users\tzieminek\Documents\GitHub\StantecCodingAssignment\coding-assignment\Ma
 C:\Users\tzieminek\Documents\GitHub\StantecCodingAssignment\coding-assignment\MarketingCodingAssignment\MarketingCodingAssignment\obj\Debug\net6.0\MarketingCodingAssignment.pdb
 C:\Users\tzieminek\Documents\GitHub\StantecCodingAssignment\coding-assignment\MarketingCodingAssignment\MarketingCodingAssignment\obj\Debug\net6.0\MarketingCodingAssignment.genruntimeconfig.cache
 C:\Users\tzieminek\Documents\GitHub\StantecCodingAssignment\coding-assignment\MarketingCodingAssignment\MarketingCodingAssignment\obj\Debug\net6.0\ref\MarketingCodingAssignment.dll
+C:\Users\tzieminek\Documents\GitHub\StantecCodingAssignment\coding-assignment\MarketingCodingAssignment\MarketingCodingAssignment\bin\Debug\net6.0\Lucene.Net.dll
+C:\Users\tzieminek\Documents\GitHub\StantecCodingAssignment\coding-assignment\MarketingCodingAssignment\MarketingCodingAssignment\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\tzieminek\Documents\GitHub\StantecCodingAssignment\coding-assignment\MarketingCodingAssignment\MarketingCodingAssignment\bin\Debug\net6.0\ICSharpCode.SharpZipLib.dll
+C:\Users\tzieminek\Documents\GitHub\StantecCodingAssignment\coding-assignment\MarketingCodingAssignment\MarketingCodingAssignment\obj\Debug\net6.0\MarketingCodingAssignment.csproj.CopyComplete
