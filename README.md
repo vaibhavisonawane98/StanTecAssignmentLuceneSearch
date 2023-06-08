@@ -1,18 +1,18 @@
 # Marketing Coding Assignment #
 
-A short coding assignment for prospective new hires.
+A short coding assignment for prospective new hires. 
 
 ## The Challenge: Build a Web-based Search App ##
 
 Using [Lucene.NET](https://lucenenet.apache.org/) and .NET Core, build an easy-to-use and visually pleasing web-based search application.
 
-## Basic Features: ##
+## Basic Features: :seedling: ##
 - For test data, use the included movies.csv file.
 - The website should load and index the test data.
 - The app should allow the user to enter keywords and find your indexed content.
 - Your app should also feature a responsive design to ensure it renders well for a variety of screen sizes and resolutions (responsive).
 
-## Advanced Features: ##
+## Advanced Features: :mortar_board: ##
 - Faceting - Provide faceting options for the user to filter by (for example, the ability to search by the date when the film was released).
 - Stemming - when searching for “engineer”, the search should also return results for “engineering”, “engineers”, and “engineered”.
 - Spell checking - present corrected search terms for user misspellings.
@@ -21,7 +21,7 @@ Using [Lucene.NET](https://lucenenet.apache.org/) and .NET Core, build an easy-t
 
 You don’t have to code all of the advanced features! Choose the features you want to implement – the scope can be as simple or complex as you want, but we want to see polish. We leave it a little ambiguous on purpose, please feel free to be creative and show us how you like to design and write code.
 
-## We’re looking for the following: ##
+## We’re looking for the following: :eye_sunglasses: ##
 
 - Can you research and learn something new that you might not be entirely familiar with?
 - Can you ask the right questions to get what you need?
