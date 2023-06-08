@@ -1,8 +1,7 @@
 .vs
-MarketingCodingAssignment/.vs
-MarketingCodingAssignment/.vs/MarketingCodingAssignment
-MarketingCodingAssignment/bin
-MarketingCodingAssignment/obj
-MarketingCodingAssignment/v17
+.vs/MarketingCodingAssignment
+bin
+obj
+v17
 *.suo
 
