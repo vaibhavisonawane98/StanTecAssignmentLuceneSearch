@@ -1,3 +1,5 @@
-.vs/
-MarketingCodingAssignment/bin/
-MarketingCodingAssignment/obj/
+.vs
+.vs/MarketingCodingAssignment
+MarketingCodingAssignment/bin
+MarketingCodingAssignment/obj
+
