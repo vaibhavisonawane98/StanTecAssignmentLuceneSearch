@@ -21,7 +21,7 @@ Using [Lucene.NET](https://lucenenet.apache.org/) and .NET Core, build an easy-t
 
 You don’t have to code all of the advanced features! Choose the features you want to implement – the scope can be as simple or complex as you want, but we want to see polish. We leave it a little ambiguous on purpose, please feel free to be creative and show us how you like to design and write code.
 
-## We’re looking for the following: :eye_sunglasses: ##
+## We’re looking for the following: :eyeglasses: ##
 
 - Can you research and learn something new that you might not be entirely familiar with?
 - Can you ask the right questions to get what you need?
