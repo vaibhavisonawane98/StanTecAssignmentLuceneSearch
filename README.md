@@ -16,7 +16,7 @@ Using [Lucene.NET](https://lucenenet.apache.org/) and .NET Core, build an easy-t
 - Faceting - Provide faceting options for the user to filter by (for example, the ability to search by the date when the film was released).
 - Stemming - when searching for “engineer”, the search should also return results for “engineering”, “engineers”, and “engineered”.
 - Spell checking - present corrected search terms for user misspellings.
-- Related search terms - after a users searches, suggesting alternate keywords related to what they’ve already searched for.
+- Related search terms - after a user searches, suggesting alternate keywords related to what they’ve already searched for.
 - Auto-complete - suggest search terms as the user types in the search box.
 
 You don’t have to code all of the advanced features! Choose the features you want to implement – the scope can be as simple or complex as you want, but we want to see polish. We leave it a little ambiguous on purpose, please feel free to be creative and show us how you like to design and write code.
