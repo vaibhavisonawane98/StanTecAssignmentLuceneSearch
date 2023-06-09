@@ -10,7 +10,7 @@ Using [Lucene.NET](https://lucenenet.apache.org/) and .NET Core, build an easy-t
 - For test data, use the included movies.csv file.
 - The website should load and index the test data.
 - The app should allow the user to enter keywords and find your indexed content.
-- Your app should also feature a responsive design to ensure it renders well for a variety of screen sizes and resolutions (responsive).
+- Your app should also feature a responsive design to ensure it renders well for a variety of screen sizes and resolutions.
 
 ## Advanced Features: :mortar_board: ##
 - Faceting - Provide faceting options for the user to filter by (for example, the ability to search by the date when the film was released).
