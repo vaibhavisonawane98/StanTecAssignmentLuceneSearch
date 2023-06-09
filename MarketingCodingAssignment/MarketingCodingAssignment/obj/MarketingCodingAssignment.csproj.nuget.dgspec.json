@@ -43,7 +43,7 @@
           "dependencies": {
             "Lucene.Net": {
               "target": "Package",
-              "version": "[3.0.3, )"
+              "version": "[4.8.0-beta00016, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

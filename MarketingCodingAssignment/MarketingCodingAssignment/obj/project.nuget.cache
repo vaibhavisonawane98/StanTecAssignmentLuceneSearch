@@ -1,33 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "ctTru7ePIDQmZmoN0SVkp2vlcenCrTJpiOqamqIqfZRgYvfH1mfUePemfOaxd9Ra78/LgG3PLguL/oENNOlv1g==",
+  "dgSpecHash": "zpiPDMnCHoIpiEXRkWrXAwJVN7W5sLdS1NsdtYIUhvBs7/qmqzWxt6KoS2BjUM3eW61VyqH427rx8zwc+BMo5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\tzieminek\\Documents\\GitHub\\StantecCodingAssignment\\coding-assignment\\MarketingCodingAssignment\\MarketingCodingAssignment\\MarketingCodingAssignment.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\tzieminek\\.nuget\\packages\\lucene.net\\3.0.3\\lucene.net.3.0.3.nupkg.sha512",
+    "C:\\Users\\tzieminek\\.nuget\\packages\\j2n\\2.0.0\\j2n.2.0.0.nupkg.sha512",
+    "C:\\Users\\tzieminek\\.nuget\\packages\\lucene.net\\4.8.0-beta00016\\lucene.net.4.8.0-beta00016.nupkg.sha512",
+    "C:\\Users\\tzieminek\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.0.0\\microsoft.extensions.configuration.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\tzieminek\\.nuget\\packages\\microsoft.extensions.primitives\\2.0.0\\microsoft.extensions.primitives.2.0.0.nupkg.sha512",
     "C:\\Users\\tzieminek\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\tzieminek\\.nuget\\packages\\sharpziplib\\0.86.0\\sharpziplib.0.86.0.nupkg.sha512"
+    "C:\\Users\\tzieminek\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.4.0\\system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Lucene.Net 3.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Lucene.Net",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'SharpZipLib 0.86.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
-      "libraryId": "SharpZipLib",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

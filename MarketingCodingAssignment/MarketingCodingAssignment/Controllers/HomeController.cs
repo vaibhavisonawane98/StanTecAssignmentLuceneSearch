@@ -53,11 +53,11 @@ namespace MarketingCodingAssignment.Controllers
             return;
         }
 
-        //[HttpPost]
-        //public JsonResult Search(String searchString) 
-        //{
-        //    return Json(_searchEngine.Search(searchString), new JsonSerializerSettings());
-        //}
+        [HttpPost]
+        public JsonResult Search(String searchString)
+        {
+            return Json(_searchEngine.Search(searchString), new JsonSerializerSettings());
+        }
 
 
 
