@@ -39,7 +39,6 @@ namespace MarketingCodingAssignment.Controllers
             _searchEngine.CreateIndexAndSchema();
         }
 
-        [HttpGet]
         public void PopulateIndex()
         {
             // Sample Data
@@ -50,6 +49,12 @@ namespace MarketingCodingAssignment.Controllers
             };
 
             _searchEngine.PopulateIndex(films);
+            return;
+        }
+
+        public void DeleteIndexContents()
+        {
+            _searchEngine.DeleteIndexContents();
             return;
         }
 
