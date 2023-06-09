@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[4.8.0-beta00016, )"
             },
+            "Lucene.Net.Analysis.Common": {
+              "target": "Package",
+              "version": "[4.8.0-beta00016, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"

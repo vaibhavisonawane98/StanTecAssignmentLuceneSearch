@@ -32,6 +32,22 @@
           }
         }
       },
+      "Lucene.Net.Analysis.Common/4.8.0-beta00016": {
+        "type": "package",
+        "dependencies": {
+          "Lucene.Net": "4.8.0-beta00016"
+        },
+        "compile": {
+          "lib/net6.0/Lucene.Net.Analysis.Common.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Lucene.Net.Analysis.Common.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration.Abstractions/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -148,6 +164,28 @@
         "tools/uninstall.ps1"
       ]
     },
+    "Lucene.Net.Analysis.Common/4.8.0-beta00016": {
+      "sha512": "7pjEAIliWdih6E3I0hCE8hKcKKRx1LLzeQBslF1fhvzE1Sal4NyHd8RFJHV1Z+yHlBw4gCyyVIDZADiIoyqwxg==",
+      "type": "package",
+      "path": "lucene.net.analysis.common/4.8.0-beta00016",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "NOTICE.txt",
+        "lib/net45/Lucene.Net.Analysis.Common.dll",
+        "lib/net45/Lucene.Net.Analysis.Common.xml",
+        "lib/net6.0/Lucene.Net.Analysis.Common.dll",
+        "lib/net6.0/Lucene.Net.Analysis.Common.xml",
+        "lib/netstandard2.0/Lucene.Net.Analysis.Common.dll",
+        "lib/netstandard2.0/Lucene.Net.Analysis.Common.xml",
+        "lib/netstandard2.1/Lucene.Net.Analysis.Common.dll",
+        "lib/netstandard2.1/Lucene.Net.Analysis.Common.xml",
+        "lucene-net-icon-128x128.png",
+        "lucene.net.analysis.common.4.8.0-beta00016.nupkg.sha512",
+        "lucene.net.analysis.common.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Configuration.Abstractions/2.0.0": {
       "sha512": "rHFrXqMIvQNq51H8RYTO4IWmDOYh8NUzyqGlh0xHWTP6XYnKk7Ryinys2uDs+Vu88b3AMlM3gBBSs78m6OQpYQ==",
       "type": "package",
@@ -231,6 +269,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Lucene.Net >= 4.8.0-beta00016",
+      "Lucene.Net.Analysis.Common >= 4.8.0-beta00016",
       "Newtonsoft.Json >= 13.0.3"
     ]
   },
@@ -275,6 +314,10 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "Lucene.Net": {
+            "target": "Package",
+            "version": "[4.8.0-beta00016, )"
+          },
+          "Lucene.Net.Analysis.Common": {
             "target": "Package",
             "version": "[4.8.0-beta00016, )"
           },
