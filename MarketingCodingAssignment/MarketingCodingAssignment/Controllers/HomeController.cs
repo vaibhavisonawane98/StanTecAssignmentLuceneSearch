@@ -33,12 +33,6 @@ namespace MarketingCodingAssignment.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        [HttpGet]
-        public void CreateIndexAndSchema()
-        {
-            _searchEngine.CreateIndexAndSchema();
-        }
-
         public void PopulateIndex()
         {
             // Sample Data
@@ -52,19 +46,17 @@ namespace MarketingCodingAssignment.Controllers
             return;
         }
 
+        //[HttpPost]
+        public JsonResult Search(String searchString)
+        {
+            return Json(_searchEngine.Search(searchString));
+        }
+
         public void DeleteIndexContents()
         {
             _searchEngine.DeleteIndexContents();
             return;
         }
-
-        //[HttpPost]
-        //public JsonResult Search(String searchString)
-        //{
-        //    return Json(_searchEngine.Search(searchString), new JsonSerializerSettings());
-        //}
-
-
 
     }
 }
