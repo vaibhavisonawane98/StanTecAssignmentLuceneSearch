@@ -3,6 +3,8 @@ using MarketingCodingAssignment.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Newtonsoft.Json;
+using Microsoft.VisualBasic.FileIO;
+using System.Text.Json;
 
 namespace MarketingCodingAssignment.Controllers
 {
@@ -19,7 +21,15 @@ namespace MarketingCodingAssignment.Controllers
 
         public IActionResult Index()
         {
+            PopulateIndex();
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(string searchString)
+        {
+            var result = Search(searchString);
+            return View(result);
         }
 
         public IActionResult Privacy()
@@ -32,24 +42,58 @@ namespace MarketingCodingAssignment.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        public List<Film> GetData()
+        {
+            var path = "C:\\StanTecAssignment\\movies.csv";
+            string json;
 
+            using (var parser = new TextFieldParser(path))
+            {
+                parser.TextFieldType = FieldType.Delimited;
+                parser.SetDelimiters(",");
+
+                string[] headers = parser.ReadFields();
+
+                var records = new List<Dictionary<string, string>>();
+
+                while (!parser.EndOfData)
+                {
+                    string[] fields = parser.ReadFields();
+
+                    var record = new Dictionary<string, string>();
+
+                    for (int i = 0; i < headers.Length; i++)
+                    {
+                        record[headers[i]] = fields[i];
+                    }
+
+                    records.Add(record);
+                }
+
+                json = JsonConvert.SerializeObject(records, Formatting.Indented);
+            }
+
+            var ListOfRecords = System.Text.Json.JsonSerializer.Deserialize<List<Film>>(json, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+                IgnoreNullValues = true
+            });
+            return ListOfRecords;
+
+        }
+        
         public void PopulateIndex()
         {
             // Sample Data
-            var films = new List<Film> {
-                new Film {Id = "Film123", Title = "Test Title 1", Overview = "Test Desc 1" },
-                new Film {Id = "Film456", Title = "Test Title 2", Overview = "Test Desc 2" },
-                new Film {Id = "Film789", Title = "Test Title 3", Overview = "Test Desc 3" }
-            };
+            var films = GetData();
 
             _searchEngine.PopulateIndex(films);
             return;
         }
 
-        //[HttpPost]
-        public JsonResult Search(String searchString)
+        public List<Film> Search(String searchString)
         {
-            return Json(_searchEngine.Search(searchString));
+            return _searchEngine.Search(searchString).ToList();
         }
 
         public void DeleteIndexContents()

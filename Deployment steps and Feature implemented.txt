@@ -1,0 +1,16 @@
+1)After Cloning the Repository in local computer we Can change path given for test data from HomeController class line no. 47. Here we can give path of test data which is present in local.
+2)In SearchEngine class we can give local path for creation of index which is on line no.32 and line no.73.
+
+Below functionalities are implemented
+Basic Features: 
+- For test data, use the included movies.csv file.
+- The website should load and index the test data.
+- The app should allow the user to enter keywords and find your indexed content.
+- Your app should also feature a responsive design to ensure it renders well for a variety of screen sizes and resolutions.
+
+Advanced Features: 
+- Stemming - when searching for “engineer”, the search should also return results for “engineering”, “engineers”, and “engineered”.
+- Spell checking - present corrected search terms for user misspellings.
+
+
+

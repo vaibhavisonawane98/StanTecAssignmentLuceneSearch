@@ -1,18 +1,161 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿<div class="container-fluid">
+
+@model IEnumerable<MarketingCodingAssignment.Models.Film>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
 }
 
-<script>
 
 
-</script>
+<h2 class="text-center">List Of Films</h2>
 
-<div class="text-center">
-    <h1 class="display-4">Search</h1>
-    <span>
-        <input type="search">
-    </span>
+<div class="row">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <form>
+            <div class="row">
+                <div class="col-sm-10">
+                    <input type="text" name="searchString" placeholder="Search your text" style="width:95%" spellcheck="true" autocomplete="on" required > </input>
+                </div>
+                <div class="col-sm-2">
+                    <button class="btn btn-primary" type="submit">search</button>
+                </div>
+            </div>
+        </form>
+    }
 </div>
+</div>
+ 
+<div class="table-responsive table-scrollbar">
+    <div class="col-sm-12">
+    
+    @if (Model!= null && Model.Count() > 0)
+    {
+        <table class="table table-bordered ">
+             <thead>
+             <tr>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.Id)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.Title)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.budget)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.genres)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.original_language)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.overview)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.popularity)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.production_companies)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.release_date)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.revenue)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.runtime)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.tagline)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.vote_average)
+               </th>
+               <th scope="col">
+                   @Html.DisplayNameFor(model => model.vote_count)
+               </th>
+
+            </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.budget)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.genres)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.original_language)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.overview)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.popularity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.production_companies)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.release_date)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.revenue)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.runtime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.tagline)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.vote_average)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.vote_count)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else if(Model==null)
+    {
+       <p>Enter search data</p>
+    }
+    else
+    {
+       <p>No Films available.</p>
+    }
+    </div>
+</div>
+
+
+<style>
+.table-scrollbar {
+    max-height: 400px; 
+    overflow-y: auto;
+  }
+  .table-scrollbar thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa; 
+  }
+</style>
+
 
 
 
